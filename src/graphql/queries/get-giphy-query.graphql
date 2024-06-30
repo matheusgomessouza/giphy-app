@@ -1,3 +1,15 @@
-query GetGiphy {
-  
-}
+const GET_DATA = gql` 
+  query GetGiphys($q: String) {
+    searchGifs(q: $q, offset: 11, limit: 3) {
+      data {
+        id
+        url
+        title
+      }
+      pagination {
+        total_count
+        count
+        offset
+      }
+    }
+}`

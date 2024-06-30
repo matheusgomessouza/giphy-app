@@ -8,27 +8,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// client
-//   .query({
-//     query: gql`
-//       query {
-//         searchGifs(q: "cat", offset: 11, limit: 3) {
-//           data {
-//             id
-//             url
-//             title
-//           }
-//           pagination {
-//             total_count
-//             count
-//             offset
-//           }
-//         }
-//       }
-//     `,
-//   })
-//   .then((result) => console.log(result));
-
 export default function Home() {
   const [queryTerm, setQueryTerm] = useState<string>("");
 
